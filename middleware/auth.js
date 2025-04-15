@@ -12,3 +12,5 @@ export default function verifyJWT (req,res,next){
     }
     next()
 }
+
+// JWT verify middleware
