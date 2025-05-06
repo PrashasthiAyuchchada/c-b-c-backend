@@ -1,7 +1,7 @@
 import Product from "../models/product.js";
 
 export function createProduct(req,res){
-    if(req.user == null){
+  if(req.user == null){
         res.status(403).json({
             message : "You need to login first"
         })
@@ -24,7 +24,8 @@ export function createProduct(req,res){
             })
         }
     ).catch(
-        ()=>{
+        (err)=>{
+            console.log(err)
             res.status(500).json({
                 message : "Product not saved"
             })
